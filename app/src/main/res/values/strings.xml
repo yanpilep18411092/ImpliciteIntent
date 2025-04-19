@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ErwinSProjects</string>
+    <string name="app_name">Implicite Intent</string>
     <string name="input_website_url" />
     <string name="input_phone_number">\n</string>
     <string name="input_text" />

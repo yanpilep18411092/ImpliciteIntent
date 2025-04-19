@@ -1,27 +1,32 @@
 package com.example.erwinsprojects
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.AlarmClock
+import android.provider.MediaStore
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.erwinsprojects.databinding.ActivityExplicitIntentBinding
+import com.example.erwinsprojects.databinding.ActivityImpliciteIntentBinding
 
-class ExplicitIntentActivity : AppCompatActivity() {
+class ImpliciteIntentActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityExplicitIntentBinding
+    private lateinit var binding: ActivityImpliciteIntentBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityExplicitIntentBinding.inflate(layoutInflater)
+        binding = ActivityImpliciteIntentBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        /* ------------------------------------------------------------ */
+        /* ------------------------------------------------------------------ */
 
         // TOMBOL UTK SHARE TEXT/PESAN
         binding.btnShareTo.setOnClickListener() {
@@ -67,6 +72,5 @@ class ExplicitIntentActivity : AppCompatActivity() {
         binding.btnOpenAlaram.setOnClickListener() {
             startActivity(Intent(AlarmClock.ACTION_SHOW_ALARMS))
         }
-
     }
 }

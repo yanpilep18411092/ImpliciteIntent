@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:background="#100628"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExplicitIntentActivity">
+    tools:context=".ImpliciteIntentActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -19,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="15dp"
+            android:padding="20sp"
             tools:context=".MainActivity">
 
             <EditText
@@ -27,11 +29,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textColorHint="#6D6D6D"
-                android:textColor="#DEDEDE"
                 android:layout_marginTop="20dp"
-                android:hint="@string/input_text" />
+                android:hint="input_text"
+                android:textAlignment="center"
+                android:textColor="#DEDEDE"
+                android:textColorHint="#6D6D6D" />
 
             <Button
                 android:id="@+id/btnShareTo"
@@ -48,12 +50,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textColorHint="#6D6D6D"
-                android:textColor="#A6A6A6"
-                android:hint="@string/input_phone_number"
+                android:layout_marginTop="10dp"
+                android:hint="input phone number"
                 android:inputType="phone"
-                android:layout_marginTop="10dp" />
+                android:textAlignment="center"
+                android:textColor="#A6A6A6"
+                android:textColorHint="#6D6D6D" />
 
             <Button
                 android:id="@+id/btnCall"
@@ -70,12 +72,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textColorHint="#6D6D6D"
-                android:textColor="#A6A6A6"
-                android:hint="input location"
                 android:layout_marginTop="10dp"
-                android:inputType="textPersonName" />
+                android:hint="input location"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="#A6A6A6"
+                android:textColorHint="#6D6D6D" />
 
             <Button
                 android:id="@+id/btnOpenGoogleMap"
@@ -92,12 +94,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textColorHint="#6D6D6D"
-                android:textColor="#DEDEDE"
                 android:layout_marginTop="20dp"
-                android:hint="@string/input_website_url"
+                android:hint="input website url"
                 android:inputType="textPostalAddress"
+                android:textAlignment="center"
+                android:textColor="#DEDEDE"
+                android:textColorHint="#6D6D6D"
                 tools:ignore="TextFields" />
 
             <Button
@@ -126,8 +128,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/btn_dual_clr"
-                android:textColor="#A6A6A6"
                 android:text="Open Galery"
+                android:textColor="#A6A6A6"
                 android:textSize="16sp" />
 
             <Button
@@ -136,11 +138,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/btn_dual_clr"
-                android:textColor="#A6A6A6"
                 android:text="Open Alaram"
+                android:textColor="#A6A6A6"
                 android:textSize="16sp" />
         </LinearLayout>
-        
+
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

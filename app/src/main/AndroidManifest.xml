@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ErwinSProjects"
         tools:targetApi="31">
         <activity
+            android:name=".ImpliciteIntentActivity"
+            android:exported="false" />
+        <activity
             android:name=".ExplicitIntentActivity"
             android:exported="true">
             <intent-filter>
